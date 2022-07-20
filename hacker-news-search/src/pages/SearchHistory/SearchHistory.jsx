@@ -9,10 +9,12 @@ const SearchHistory = (props) =>{
     
     return(
         <div>
+            <h1>History</h1>
             <ul>
-                {displayedHistory.map((term)=>{
+                {/* I wanted to map it in reverse.  The slice and reverse are not nessicairy */}
+                {displayedHistory.slice(0).reverse().map((term, el)=>{
                     return(
-                        <li>{term}</li>
+                        <li key={el}>{term}</li>
                     )
                 })}
             </ul>
