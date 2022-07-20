@@ -9,11 +9,9 @@ import SearchHistory from "./pages/SearchHistory/SearchHistory";
 
 // Utilities
 import React, { useEffect, useState } from 'react';
-import { Navigate, useNavigate } from 'react-router-dom';
 import Navbar from "./components/NavBar";
 
 function App() {
-  const navigate = useNavigate()
   const [searchHistory, setSearchHistory] = useState([]);
   const [foundItems, setFoundItems] = useState([])
 
