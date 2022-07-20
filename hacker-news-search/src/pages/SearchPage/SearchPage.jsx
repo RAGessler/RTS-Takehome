@@ -1,17 +1,15 @@
 //General
-import SearchBar from '../../components/searchbar';
+import SearchBar from '../../components/SearchBar';
 //Utilities
 import React, { useState, useEffect } from 'react';
 
 
 const SearchPage = (props) => {
 
-    function handleSearch(userInput)
-
     return(
         <div>
             <h1>Search Page</h1>
-            <SearchBar search={props.search} />
+            <SearchBar search={props.search}/>
         </div>
     )
 

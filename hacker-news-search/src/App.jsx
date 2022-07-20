@@ -12,16 +12,14 @@ import { Navigate, useNavigate } from 'react-router-dom';
 
 function App() {
   const navigate = useNavigate()
-  const [searchTerm, setSearchTerm] = useState('');
   const [searchHistory, setSearchHistory] = useState([]);
   const [foundItems, setFoundItems] = useState([])
 
   async function searchItems(searchQuery){
     let response = await axios.get(`http://hn.algolia.com/api/v1/search?query=${searchQuery}`)
-    setFoundItems(response.data.items)
+    setFoundItems(response.data.hits)
     setSearchHistory([...searchHistory, searchQuery]) 
   }
-
 
   return (
     <div>
