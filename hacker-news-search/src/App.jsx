@@ -6,6 +6,7 @@ import axios from "axios";
 //Pages
 import SearchPage from "./pages/SearchPage/SearchPage";
 import SearchHistory from "./pages/SearchHistory/SearchHistory";
+import HomePage from "./pages/HomePage/HomePage";
 
 // Utilities
 import React, { useEffect, useState } from 'react';
@@ -29,6 +30,10 @@ function App() {
     <div>
       <Navbar />
       <Routes>
+        <Route 
+        path="/"
+        element={<HomePage/>}
+        />
         <Route 
         path="/search"
         element={
